@@ -1,260 +1,358 @@
-Personalized Content Dashboard
+# Personalized Content Dashboard
 
-A modern, responsive content dashboard built with Next.js, TypeScript, Redux Toolkit, and Tailwind CSS. It brings together personalized news, movies, 
-and social content in a single interface, with features such as search, favorites, drag-and-drop feed organization, dark mode, pagination, and persistent
-user preference
+A modern, responsive, and personalized content dashboard built as part of the **PGAGI Software Development Engineer (SDE) Intern – Frontend Development Assignment**.
 
-# Technical Components
+The application brings together content from multiple sources, including **news, movies, and social posts**, into a unified personalized dashboard. Users can customize their interests, search content, manage favorites, reorder their feed, switch themes, and maintain their preferences across sessions.
 
-## Tech Stack
+---
 
-### Frontend
-- **Next.js 16** – React framework using the App Router
-- **React** – Component-based UI development
-- **TypeScript** – Static typing and type safety
-- **Tailwind CSS** – Utility-first responsive styling
-- **Lucide React** – UI icons
-- **Framer Motion** – UI animations and transitions
-- **dnd-kit** – Drag-and-drop feed organization
+## Live Demo
 
-### State Management
-- **Redux Toolkit** – Global application state management
-- **RTK Query** – API fetching, caching, and request state management
-- **Redux slices** for:
-  - Favorites
-  - Feed ordering
-  - User preferences
-  - Search
-  - Theme
+**Production URL:**  
+https://pgagi-one.vercel.app/
 
-### API & Backend
-- **Next.js Route Handlers** – Server-side API endpoints
-- **NewsAPI** – News data integration
-- **TMDB API** – Movie data and recommendations
-- **Mock Social API/Data** – Social media feed simulation
+---
 
-### API Routes
+## GitHub Repository
+
+**Repository:**  
+https://github.com/Akshitha-gowda55/pgagi
+
+---
+
+## Project Overview
+
+The Personalized Content Dashboard is designed to provide users with a single interface for discovering and interacting with different types of content.
+
+The dashboard combines:
+
+- Personalized news
+- Movie recommendations
+- Social content
+- Trending content
+- Search
+- Favorites
+- User preferences
+- Drag-and-drop feed organization
+- Dark/light theme
+- Persistent user state
+
+The application uses a modern frontend architecture with **Next.js, TypeScript, Redux Toolkit, RTK Query, Tailwind CSS, Framer Motion, and dnd-kit**.
+
+---
+
+# Features
+
+## 1. Personalized Content Feed
+
+The dashboard displays content based on the user's selected interests.
+
+Supported categories include:
+
+- Technology
+- Business
+- Sports
+- Entertainment
+- Science
+- Health
+- Finance
+- Travel
+
+Users can modify their interests from the Settings page.
+
+---
+
+## 2. News Feed
+
+News content is retrieved through the NewsAPI integration.
+
+Features include:
+
+- Personalized categories
+- Search
+- Pagination
+- Loading states
+- Error handling
+- Empty states
+- Responsive news cards
+- Favorite functionality
+
+---
+
+## 3. Movie Recommendations
+
+Movie content is retrieved through the TMDB API.
+
+Features include:
+
+- Personalized movie recommendations
+- Movie search
+- Genre-based recommendations
+- Popularity-based discovery
+- Pagination
+- Favorite functionality
+- Loading and error states
+
+---
+
+## 4. Social Feed
+
+The application includes mock social content to demonstrate a multi-source content dashboard.
+
+Social content includes:
+
+- User posts
+- Profile information
+- Engagement information
+- Interactive actions
+- Responsive social cards
+
+---
+
+## 5. Search
+
+The dashboard provides a global search interface.
+
+Features:
+
+- Search news
+- Search movies
+- Debounced search
+- Search state managed using Redux
+- Clear search functionality
+- Search loading states
+- Empty search states
+
+A debounce mechanism is used to prevent unnecessary API requests while the user is typing.
+
+---
+
+## 6. Favorites
+
+Users can favorite content from the dashboard.
+
+Favorites are supported for different content types.
+
+Favorite state is persisted using browser local storage so that favorites remain available after refreshing the application.
+
+---
+
+## 7. Drag and Drop Feed Organization
+
+Users can reorganize their feed using drag and drop.
+
+The application uses **dnd-kit** for drag-and-drop functionality.
+
+The customized feed order is persisted so that the user's organization is maintained between sessions.
+
+---
+
+## 8. User Preferences
+
+Users can customize their content preferences through the Settings page.
+
+Preferences include:
+
+- Content categories
+- Content types
+- Theme preferences
+- Personalized feed configuration
+
+---
+
+## 9. Persistent User State
+
+Important user state is persisted using browser local storage.
+
+Persisted information includes:
+
+- User preferences
+- Favorites
+- Theme preference
+- Feed ordering
+
+This allows the application to maintain the user's experience after page refreshes and new sessions.
+
+---
+
+## 10. Dark Mode
+
+The application supports:
+
+- Light mode
+- Dark mode
+
+Users can switch themes from the application header.
+
+Theme preference is persisted across sessions.
+
+---
+
+## 11. Trending Content
+
+The Trending page provides a dedicated view for discovering popular content.
+
+It combines available content from the application's supported sources.
+
+---
+
+## 12. Responsive Design
+
+The dashboard is designed to work across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The layout includes:
+
+- Responsive sidebar
+- Mobile navigation
+- Responsive content cards
+- Responsive grids
+- Mobile-friendly controls
+
+---
+
+## 13. Loading States
+
+The application provides skeleton loading states while content is being fetched.
+
+This helps prevent abrupt layout changes and improves the user experience during API requests.
+
+---
+
+## 14. Error Handling
+
+The application includes error handling for API failures.
+
+Users receive appropriate error states with retry functionality where applicable.
+
+---
+
+## 15. Empty States
+
+The application handles situations where no content is available.
+
+Examples include:
+
+- No search results
+- No favorites
+- No content for selected filters
+- Empty API responses
+
+---
+
+# Technology Stack
+
+## Frontend
+
+| Technology | Purpose |
+|---|---|
+| Next.js | React framework and application routing |
+| React | User interface development |
+| TypeScript | Static typing |
+| Tailwind CSS | Styling and responsive design |
+| Lucide React | Icons |
+| Framer Motion | Animations |
+
+---
+
+## State Management
+
+| Technology | Purpose |
+|---|---|
+| Redux Toolkit | Global application state |
+| React Redux | React/Redux integration |
+| RTK Query | API fetching, caching, and request state |
+
+---
+
+## APIs
+
+| API | Purpose |
+|---|---|
+| NewsAPI | News content |
+| TMDB API | Movie content |
+| Mock Social API | Social content |
+
+---
+
+## Interaction
+
+| Technology | Purpose |
+|---|---|
+| dnd-kit | Drag-and-drop feed organization |
+| Debounce Hook | Optimized search requests |
+
+---
+
+## Theming
+
+| Technology | Purpose |
+|---|---|
+| next-themes | Theme management |
+| Tailwind CSS | Theme-aware styling |
+
+---
+
+## Testing
+
+| Technology | Purpose |
+|---|---|
+| Vitest | Unit testing |
+| React Testing Library | Component and integration testing |
+| Playwright | End-to-end testing |
+
+---
+
+## Development Tools
+
+| Tool | Purpose |
+|---|---|
+| ESLint | Code quality |
+| Git | Version control |
+| GitHub | Source control and repository |
+| Vercel | Deployment |
+
+---
+
+# Application Architecture
+
+The application follows a feature-oriented frontend architecture.
 
 ```text
-/api/news
-/api/movies
-/api/social
-
-Architecture:
-
-React Components
-       ↓
-Redux Toolkit / RTK Query
-       ↓
-Next.js API Routes
-       ↓
-External APIs / Mock Data
-
-API credentials are accessed server-side through environment variables.
-
-Application Architecture
-src/
-├── app/
-│   ├── api/
-│   │   ├── movies/
-│   │   ├── news/
-│   │   └── social/
-│   ├── favourites/
-│   ├── settings/
-│   ├── trending/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── providers.tsx
-│
-├── components/
-│   ├── content/
-│   ├── feed/
-│   └── layout/
-│
-├── features/
-│   ├── favorites/
-│   ├── feed/
-│   ├── preferences/
-│   ├── search/
-│   └── theme/
-│
-├── hooks/
-├── lib/
-├── services/
-│   ├── api/
-│   └── social/
-├── store/
-├── test/
-└── types/
-Core Technical Features
-Personalized Content
-Category-based user preferences
-Personalized news queries
-Personalized movie recommendations
-TMDB genre mapping
-Dynamic feed composition
-Search
-Global search state using Redux Toolkit
-Debounced search using a custom useDebounce hook
-News and movie search integration
-Feed Management
-Unified content model
-Separate News, Movies, and Social content sections
-Drag-and-drop feed organization
-Persistent feed ordering
-Pagination / Load More functionality
-Favorites
-Redux-based favorite state
-Favorite button component
-Persistent favorites using browser local storage
-Dedicated Favorites page
-Theme
-Light and dark modes
-Redux theme state
-Persistent theme preference
-Responsive theme-aware UI
-Responsive UI
-Desktop sidebar navigation
-Responsive header
-Mobile navigation menu
-Responsive content grids
-Mobile-friendly cards and controls
-UI States
-Loading skeletons
-API error states
-Empty states
-Search empty states
-Loading and error handling for API requests
-Data & State Flow
-User Interaction
-       ↓
-React Component
-       ↓
-Redux Action / RTK Query
-       ↓
-Next.js API Route
-       ↓
-External API
-       ↓
-API Response
-       ↓
-RTK Query Cache / Redux State
-       ↓
-React UI
-Persistence
-
-Browser localStorage is used to persist client-side user state.
-
-Persisted state includes:
-
-Favorites
-User preferences
-Feed ordering
-Theme preference
-Testing
-Vitest
-
-Used for unit and component testing.
-
-Tested areas include:
-
-Redux slices
-API services
-React components
-Custom hooks
-Settings functionality
-React Testing Library
-
-Used for testing React component behavior and user interactions.
-
-Playwright
-
-Used for end-to-end browser testing.
-
-E2E coverage includes:
-
-Dashboard
-Navigation
-Search
-Settings
-User interactions
-Development Tools
-Git – Version control
-GitHub – Source code repository
-VS Code / Cursor – Development environment
-Postman – API testing
-ESLint – Code quality and linting
-Vercel – Production deployment
-Environment Configuration
-
-Required environment variables:
-
-NEWS_API_KEY=your_newsapi_key
-TMDB_API_KEY=your_tmdb_api_key
-
-Environment variables are stored locally in:
-
-.env.local
-
-.env.local is excluded from Git using .gitignore.
-
-Available Scripts
-npm run dev
-
-Starts the Next.js development server.
-
-npm run build
-
-Creates the production build.
-
-npm start
-
-Starts the production server.
-
-npm run lint
-
-Runs ESLint.
-
-npm test -- --run
-
-Runs Vitest tests.
-
-npm run test:watch
-
-Runs Vitest in watch mode.
-
-npm run test:e2e
-
-Runs Playwright end-to-end tests.
-
-Production Deployment
-
-The application is deployed using Vercel.
-
-GitHub
-   ↓
-Vercel
-   ↓
-Next.js Production Build
-   ↓
-Serverless API Routes
-   ↓
-NewsAPI / TMDB
-
-Production environment variables are configured through Vercel Environment Variables.
-
-Technical Highlights
-Next.js App Router architecture
-TypeScript-first development
-Redux Toolkit state management
-RTK Query API caching
-Server-side API key handling
-Personalized content aggregation
-Debounced search
-Persistent client-side state
-Drag-and-drop feed organization
-Responsive UI architecture
-Component-based design
-Automated unit/component/API testing
-Playwright E2E testing
-Production deployment with Vercel
+User Interface
+      |
+      v
+Next.js App Router
+      |
+      +----------------------+
+      |                      |
+      v                      v
+React Components       Application Pages
+      |                      |
+      +----------+-----------+
+                 |
+                 v
+          Redux Toolkit
+                 |
+        +--------+--------+
+        |                 |
+        v                 v
+   Application State   RTK Query
+        |                 |
+        |                 v
+        |           API Endpoints
+        |                 |
+        |       +---------+---------+
+        |       |         |         |
+        v       v         v         v
+     NewsAPI   TMDB   Social API  Other Data
+        |
+        v
+   Persistent State
+        |
+        v
+    localStorage
