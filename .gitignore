@@ -22,3 +22,6 @@ pnpm-debug.log*
 Thumbs.db
 .vercel/
 *.pem
+.env.local
+.env.*.local
+.env
